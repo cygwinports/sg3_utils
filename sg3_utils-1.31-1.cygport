@@ -1,0 +1,13 @@
+DESCRIPTION="SCSI utilities"
+HOMEPAGE="http://sg.danny.cz/sg/sg3_utils.html"
+SRC_URI="http://sg.danny.cz/sg/p/${P}.tgz"
+
+PATCH_URI="
+	1.31-no-undefined.patch
+	1.31-vpath.patch
+"
+
+PKG_NAMES="${PN} libsgutils2_2 libsgutils2-devel"
+sg3_utils_CONTENTS="usr/bin/*.exe usr/share/"
+libsgutils2_2_CONTENTS="usr/bin/cygsgutils2-2.dll"
+libsgutils2_devel_CONTENTS="usr/include/ usr/lib/"
